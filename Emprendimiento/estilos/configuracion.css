@@ -1,0 +1,125 @@
+/* Estilos generales */
+body {
+    background-color: #0D0D0D; 
+    color: #fff; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+}
+
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 150px;
+    background-color: rgba(2,2,2,2.4);
+    padding: 50px;
+}
+
+.password-form input {
+    margin-top: 25px;
+}
+
+.password-form label {
+    padding-top: 15px;
+}
+
+/* Título */
+.title {
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* Formulario para cambiar la foto de perfil */
+.photo-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fade 0.5s;
+}
+
+.photo-form label {
+    margin-bottom: 20px;
+}
+
+.photo-form .preview {
+    width: 200px;
+    height: 200px;
+    background-color: #333; 
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-form input[type="file"] {
+    display: none;
+}
+
+.photo-form button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.photo-form button:hover {
+    background-color: #ff5722; 
+}
+
+/* Formulario para cambiar la contraseña */
+.password-form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-top: 20px;
+    margin: 0 50px;
+    animation: fade 0.5s;
+}
+
+.password-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+.password-form button {
+    padding: 10px 20px;
+    background-color: #2196F3; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 25px;
+}
+
+.password-form button:hover {
+    background-color: #1976D2;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

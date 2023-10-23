@@ -1,0 +1,441 @@
+/* Variables comunes */
+:root {
+    --main-bg-color: #0D0D0D; 
+    --transparent-bg: rgba(0, 0, 0, 0.8);
+    --btn-bg-color: #f44336;
+    --btn-hover-color: #ff5722;
+    --text-color: #fff;
+    --border-radius: 10px;
+    --menu-border-color: #ff6a00;
+}
+
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Estilos para el menú de la barra lateral */
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #2b2b2b, #000000);
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: avatarGlow 2s ease-in-out infinite alternate; 
+}
+
+.avatar {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.welcome-text {
+    color: #fff; 
+    font-weight: bold; 
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    text-shadow: 0 0 5px #ff6a00, 0 0 10px #ff6a00, 0 0 15px #ff6a00; 
+}
+
+/* Estilos para los enlaces del menú */
+.sidebar a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; 
+    transition: border-color 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    border: 2px solid transparent; 
+}
+
+.sidebar a:hover {
+    border-color: var(--menu-border-color);
+    box-shadow: 0 0 10px rgba(255, 106, 0, 0.8); 
+}
+
+/* Estilos para el contenido principal */
+main {
+    margin-left: 250px; 
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    overflow-y: scroll; 
+}
+
+/* Estilos para la sección hero */
+.hero {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Estilos para los botones en la sección hero */
+.hero .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--btn-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: var(--btn-hover-color);
+}
+
+/* Estilos para la sección introducción */
+.introduccion {
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.introduccion h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.introduccion p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Estilos para la sección contenido-adicional */
+.contenido-adicional {
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contenido-adicional h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.contenido-adicional p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Estilos para el scroll horizontal de imágenes */
+.scroll-horizontal {
+    display: flex;
+    padding: 20px 0;
+    justify-content: center; 
+    overflow-x: auto;
+}
+
+/* Estilos para las imágenes en el scroll horizontal */
+.scroll-horizontal img {
+    max-width: 300px;
+    margin-right: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.scroll-horizontal img:hover {
+    transform: scale(1.1); 
+}
+
+/* Estilos para la sección de videos */
+.videos {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    border-radius: var(--border-radius);
+    margin-top: 20px;
+}
+
+.videos h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+    color: var(--text-color);
+}
+
+/* Estilos para los contenedores de video en el scroll horizontal */
+.video-container {
+    display: inline-block; 
+    margin: 20px 15px; 
+    text-align: center; 
+}
+
+.video-container h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+/* Estilos para los videos */
+video {
+    max-width: 320px; 
+    max-height: 180px;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    display: block;
+    margin: 0 auto; 
+}
+
+video:hover {
+    transform: scale(1.1); 
+}
+
+/* Estilos para el botón de aceptar los términos y condiciones */
+.formulario label .ace {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    color: var(--text-color);
+}
+
+.formulario label .lbl {
+    display: inline-block;
+    vertical-align: middle;
+    color: var(--text-color); 
+}
+
+.formulario-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1c1c1c, #2b2b2b);
+    color: var(--text-color);
+}
+
+.formulario-container h1 {
+    padding: 20px;
+}
+
+.formulario {
+    opacity: 0;
+    display: none;
+    width: 500px;
+    padding: 20px;
+    background-color: #1c1c1c; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.formulario.active {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}
+
+.formulario label,
+.formulario input,
+.formulario button {
+    display: block;
+    margin-bottom: 20px;
+    width: 100%;
+    color: #fff; 
+}
+
+.formulario label {
+    font-weight: bold;
+}
+
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    background-color: #2b2b2b; 
+    color: #fff; 
+}
+
+.formulario button {
+    background-color: #f7f7f7;
+    color: #333; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #555;
+    color: #fff; 
+}
+
+/* Estilos para las animaciones */
+.formulario-opciones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formulario-opciones button {
+    background-color: transparent;
+    border: none;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: var(--text-color);
+}
+
+.formulario-opciones button:hover {
+    color: #555;
+}
+
+/* Estilos para el botón de aceptar los términos y condiciones */
+.formulario label .ace {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.formulario label .lbl {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.formulario label .ace,
+.formulario label .lbl {
+    color: var(--text-color);
+}
+
+/* Estilos para el footer */
+.footer {
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    background-color: transparent; 
+    color: var(--text-color);
+    text-align: center;
+    padding: 10px 0;
+    z-index: 999; 
+}
+
+.footer p {
+    font-size: 12px;
+    color: #777;
+}
+
+.redes-sociales-footer {
+    margin-top: 10px;
+}
+
+.redes-sociales-footer .icono {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.redes-sociales-footer .icono:hover {
+    color: #555; 
+}
+
+
+/* Estilos para el footer */
+.footeradmin {
+    background-color: transparent; 
+    text-align: center; 
+    padding: 10px 0px; 
+    margin-top: 25px;
+}
+
+.footeradmin footer {
+    color: #fff;
+}
+
+.footeradmin a.icono {
+    color: #fff; 
+    font-size: 24px; 
+    margin: 0 10px; 
+}
+
+/* Estilos para los iconos de redes sociales */
+.footeradmin a.icono:hover {
+    color: #007BFF;
+}
+
+
+/* Animación de brillo neon para el perfil de avatar */
+@keyframes avatarGlow {
+    0% {
+        box-shadow: 0 0 5px 0px rgba(255, 106, 0, 0.2), 0 0 10px 5px rgba(255, 106, 0, 0.2), 0 0 15px 10px rgba(255, 106, 0, 0.2);
+        color: var(--text-color);
+    }
+    100% {
+        box-shadow: 0 0 5px 0px rgba(255, 106, 0, 0.8), 0 0 10px 5px rgba(255, 106, 0, 0.8), 0 0 15px 10px rgba(255, 106, 0, 0.8);
+        color: var(--text-color);
+    }
+}

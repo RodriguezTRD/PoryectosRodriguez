@@ -1,0 +1,157 @@
+/* Estilos para el formulario de registro */
+body {
+    background-color: #0D0D0D; 
+    color: #fff; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#registro-container {
+    text-align: center;
+    margin-left: 300px;
+}
+
+#titulo {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+#imagen {
+    margin: 20px 0px;
+}
+
+#registro-form {
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#registro-form h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#registro-form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#registro-form label {
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+#registro-form input[type="text"],
+#registro-form select,
+#registro-form textarea,
+#registro-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+}
+
+#registro-form input[type="file"] {
+    background-color: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+#registro-form input[type="submit"] {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #f44336; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#registro-form input[type="submit"]:hover {
+    background-color: #ff5722; 
+}
+
+#imagen-preview {
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+#preview-container {
+    text-align: left;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+#preview-container h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#seccion-preview {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#titulo-preview {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}
+
+#imagen-previa {
+    max-width: 300px;
+    max-height: 300px;
+    height: auto;
+    margin-top: 10px;
+}
+
+#descripcion-preview {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#precio-preview {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Estilo adicional para el título */
+#registro-form h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para centrar el formulario y ajustar la distancia */
+#registro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
